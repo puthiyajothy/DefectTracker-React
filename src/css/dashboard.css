@@ -1,0 +1,23 @@
+.col-sm-2 {
+ 
+    /* padding-top: 20px; */
+    background-color: black;
+    /* height: 100px;
+    padding: 20px;
+    margin-top: -10px;
+    padding-bottom: 650px;
+    font-size: 20px;
+    font-style: inherit;
+    font-family: -webkit-body;
+    margin-bottom: -200px;
+    padding-left: 5px;
+    padding-right: 100px */
+}
+
+.container{
+    margin-left: -300px;
+}
+
+.tile{
+    margin-left: -100px;
+}
