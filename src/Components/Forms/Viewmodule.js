@@ -39,6 +39,7 @@ export default class Viewmodule extends React.Component{
                   <th>Module Name</th>
                   <th>Project ID</th>
                   <th>Developer Name</th>
+                  <th>Delete</th>
                 </tr>          
                 </thead>
                 <tbody id="addmodules">
@@ -46,8 +47,9 @@ export default class Viewmodule extends React.Component{
                     <tr>
                         <td>{e.moduleId}</td>
                         <td>{e.modulename}</td>
-                        <td>{e.projectName}</td>
-                        <td>{e.developerName}</td>
+                        <td>{e.addProject.projectName}</td>
+                        <td>{e.adddeveloper.developerName}</td>
+                        {/* <td><button onClick={this.delete.bind(this,e.moduleId)}></button></td> */}
                        
                     </tr>
                     ))}      
