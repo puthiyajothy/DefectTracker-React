@@ -1,0 +1,904 @@
+{
+  "adddefect": [
+    {
+      "ID": "1",
+      "defectid": "001",
+      "defecttype": "UI",
+      "defectdescription": "gfrdeyh",
+      "module": "module1",
+      "severity": "High",
+      "Piriority": "Low",
+      "status": "jjjj",
+      "assignedperson": "ddd",
+      "enterddate": "11",
+      "enteredby": "hhhh",
+      "fixeddate": "12",
+      "fixedby": "ddd",
+      "availablein": "ddd",
+      "comments": "ddd"
+    },
+    {
+      "ID": "2",
+      "defectid": "002",
+      "defecttype": "Functionality",
+      "defectdescription": "nnnnhhgfd",
+      "module": "module2",
+      "severity": "Low",
+      "Piriority": "High",
+      "status": "Open",
+      "assignedperson": "Mr.Paul",
+      "enterddate": "11.02.2019",
+      "enteredby": "Mr.john",
+      "fixeddate": "12.02.2019",
+      "fixedby": "Mr.Dan",
+      "availablein": "swdea",
+      "comments": "This is a severe defect."
+    },
+    {
+      "ID": "3",
+      "defectid": "003",
+      "defecttype": "Enhancement",
+      "defectdescription": "This is a severe Defect",
+      "module": "module3",
+      "severity": "Medium",
+      "Piriority": "Low",
+      "status": "Open",
+      "assignedperson": "Mr.John",
+      "enterddate": "21.03.2019",
+      "enteredby": "Mr.Camo",
+      "fixeddate": "22.02.2019",
+      "fixedby": "Mr.John",
+      "availablein": "swdea",
+      "comments": "This is a severe defect."
+    }
+  ],
+  "addmodules": [
+    {
+      "id": "module1",
+      "modulename": "module1",
+      "userid": "userID",
+      "projectid": "projectID"
+    },
+    {
+      "id": "Mudule2",
+      "modulename": "Module Name",
+      "userid": "User ID 1",
+      "projectid": "Project ID 1"
+    },
+    {
+      "id": "module3",
+      "modulename": "module name",
+      "userid": "user id 2",
+      "projectid": "project id 3"
+    },
+    {
+      "id": "011",
+      "modulename": "0000",
+      "userid": "0000",
+      "projectid": "0000"
+    },
+    {
+      "id": "12",
+      "modulename": "module-12",
+      "userid": "12",
+      "projectid": "12"
+    },
+    {
+      "project": [
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "projectone"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "project two"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "ppppp"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "project two"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "project 3"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "new project"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "project4"
+          },
+          "_owner": null,
+          "_store": {}
+        }
+      ],
+      "user": [
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "user one"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "user one"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "saajitha"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "johan"
+          },
+          "_owner": null,
+          "_store": {}
+        }
+      ],
+      "post": [],
+      "id": "02",
+      "modulename": "module2",
+      "userName": "user one",
+      "projectid": "project 3"
+    },
+    {
+      "project": [
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "projectone"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "project two"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "ppppp"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "project two"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "project 3"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "new project"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "project4"
+          },
+          "_owner": null,
+          "_store": {}
+        }
+      ],
+      "user": [
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "user one"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "user one"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "saajitha"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "johan"
+          },
+          "_owner": null,
+          "_store": {}
+        }
+      ],
+      "post": [],
+      "id": "3",
+      "modulename": "Module",
+      "userName": "user one",
+      "projectid": "new project"
+    },
+    {
+      "project": [
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": 3
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": 4
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": 12
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": 13
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": 14
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": 15
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": 17
+          },
+          "_owner": null,
+          "_store": {}
+        }
+      ],
+      "user": [
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": 5
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": 6
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": 18
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": 19
+          },
+          "_owner": null,
+          "_store": {}
+        }
+      ],
+      "post": [],
+      "id": "6",
+      "modulename": "module",
+      "userName": "6",
+      "projectid": "14"
+    },
+    {
+      "project": [
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "projectone"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "project two"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "ppppp"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "project two"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "project 3"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "new project"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "project4"
+          },
+          "_owner": null,
+          "_store": {}
+        }
+      ],
+      "user": [
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "user one"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "user one"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "saajitha"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "johan"
+          },
+          "_owner": null,
+          "_store": {}
+        }
+      ],
+      "post": [],
+      "userName": "user one",
+      "modulename": "mmm",
+      "id": "2",
+      "projectid": "new project"
+    },
+    {
+      "project": [
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "projectone"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "project two"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "ppppp"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "project two"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "project 3"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "new project"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "project4"
+          },
+          "_owner": null,
+          "_store": {}
+        }
+      ],
+      "user": [
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "user one"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "user one"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "saajitha"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "johan"
+          },
+          "_owner": null,
+          "_store": {}
+        }
+      ],
+      "post": [],
+      "userName": "user one",
+      "modulename": "module",
+      "id": "9",
+      "projectid": "project two"
+    },
+    {
+      "project": [
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "projectone"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "project two"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "ppppp"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "project two"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "project 3"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "new project"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "project4"
+          },
+          "_owner": null,
+          "_store": {}
+        }
+      ],
+      "user": [
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "user one"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "user one"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "saajitha"
+          },
+          "_owner": null,
+          "_store": {}
+        },
+        {
+          "type": "option",
+          "key": null,
+          "ref": null,
+          "props": {
+            "children": "johan"
+          },
+          "_owner": null,
+          "_store": {}
+        }
+      ],
+      "post": [],
+      "moduleId": "2",
+      "modulename": "module2",
+      "userName": "user one",
+      "projectid": "new project",
+      "id": "6eC0mgq"
+    },
+    {
+      "moduleId": "3",
+      "modulename": "module",
+      "projectid": "project 3",
+      "id": "tRP-FjH"
+    },
+    {
+      "modulename": "module2456",
+      "addUser": {},
+      "addProject": {
+        "projectid": "new project"
+      },
+      "id": "C7-w51F"
+    },
+    {
+      "modulename": "module2456",
+      "addUser": {},
+      "addProject": {
+        "projectid": "new project"
+      },
+      "id": "L0qJPWI"
+    },
+    {
+      "modulename": "dwdfw",
+      "addUser": {
+        "userid": "user one"
+      },
+      "addProject": {
+        "projectid": "project 3"
+      },
+      "id": "BzVqbI4"
+    },
+    {
+      "modulename": "dwdfw",
+      "addUser": {
+        "userid": "saajitha"
+      },
+      "addProject": {
+        "projectid": "project4"
+      },
+      "id": "UD4bCUu"
+    },
+    {
+      "modulename": "gjh",
+      "addUser": {},
+      "addProject": {
+        "projectid": "new project"
+      },
+      "id": "StP4PjE"
+    },
+    {
+      "modulename": "gtryt",
+      "addUser": {},
+      "addProject": {},
+      "id": "jLAIMGl"
+    },
+    {
+      "modulename": "gtryt",
+      "addUser": {
+        "userid": "6"
+      },
+      "addProject": {
+        "projectid": "13"
+      },
+      "id": "qLZdGPz"
+    }
+  ],
+  "Add_Users": [
+    {
+      "id": "001",
+      "name": "Mr.Paul",
+      "role": "Developer",
+      "password": "000000"
+    },
+    {
+      "id": "002",
+      "name": "Mr.John",
+      "role": "QA",
+      "password": "111111"
+    }
+  ],
+  "Add_Project": [
+    {
+      "pid": "002",
+      "projectid": "0003"
+    },
+    {
+      "pid": "003",
+      "projectid": "0008"
+    }
+  ]
+}
