@@ -3,8 +3,19 @@ import React from 'react';
 export default class Viewmodule extends React.Component{
     state={
         AddModule:[],
-    };
+        AddProject:[],
+        AddDeveloper:[]
 
+
+    };
+    AddProject={
+        projectName:""
+    }
+    adddeveloper={
+        developerName:""
+
+    }
+  
     componentDidMount(){
         this.getPost();
 
@@ -20,8 +31,24 @@ export default class Viewmodule extends React.Component{
         
     }
 
-
-    
+    delete(id){
+        console.log(id)
+        fetch(`http://localhost:8080/deleteDefect/${id}`,{
+            method:"DELETE",
+            headers : {
+                'Accept' : 'Application/json,text/plain,*/*',
+                'Content-type' : 'application/json'
+            },
+            body : JSON.stringify(this.state)
+        })
+        .then(()=>{
+            fetch ("http://localhost:8080/getAllDefects")
+            .then((res) => (res.json()))
+            .then((data) => {
+                this.setState ({AddDefect:data});
+            })
+        })
+      }
     render(){
         return(
 
@@ -49,7 +76,7 @@ export default class Viewmodule extends React.Component{
                         <td>{e.modulename}</td>
                         <td>{e.addProject.projectName}</td>
                         <td>{e.adddeveloper.developerName}</td>
-                        {/* <td><button onClick={this.delete.bind(this,e.moduleId)}></button></td> */}
+                        <td><button>Delete</button></td>
                        
                     </tr>
                     ))}      

@@ -14,6 +14,7 @@ import View_developer from "./View_developer";
 // import Editproject from "./Editproject";
 import Header from '../Core/Header';
 import Navbar from '../Core/Navbar';
+import Editdeveloper from "./Editdeveloper";
 
 export default class Roting extends Component {
   render() {
@@ -24,13 +25,12 @@ export default class Roting extends Component {
         <Navbar/>
         <Switch>
           <Route path="/" exact component={Add_Project} />
-          <Route
-            path="/Editproject/:projectId"
-            exact
-            component={Editproject}
-          />
+          <Route path="/Editproject/:projectId" exact component={Editproject}/>
 
-    <Route path="/Add_defect" exact render={ () => {
+          <Route path="/" exact component={Add_developer}/>
+          <Route path="/Editdeveloper/:developerId" exact component={Editdeveloper}/>
+
+          <Route path="/Add_defect" exact render={ () => {
           return (
             <div className="container">
             <br/>
@@ -41,11 +41,8 @@ export default class Roting extends Component {
         <div className="container">
         <Addmodule/></div> ); }}/>
 
-  <Route path="/View_defect" exact render={()=>{
-       return(
-        <div className="container">
-        <View_defect/></div> ); }}/>
-
+  <Route path="/View_defect" exact component={View_defect}/>
+   
 
         <Route path="/Viewmodule" exact render={()=>{
      return(
@@ -72,12 +69,6 @@ export default class Roting extends Component {
        <Add_Project/></div>);}}/>
        
        <Route path = "/View_Project" exact component={View_Project} />
-{/*        
-      //  render = {() => {
-      //    return(
-      //      <div className="container">
-      //      <br/>
-      //      <View_Project/></div> ); }}/> */}
 
            <Route path = "/Add_developer" exact render = {() => {
          return(
@@ -86,11 +77,8 @@ export default class Roting extends Component {
            <Add_developer/></div> ); }}/>
 
 
-           <Route path="/View_developer" exact render={() => {
-         return (
-            <div className="container">
-            <br/>
-            <View_developer/> </div>);}} />
+           <Route path="/View_developer" exact component={View_developer}/>
+         
       
         </Switch>
         </div>

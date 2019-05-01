@@ -6,9 +6,11 @@ constructor(props){
 	super(props)
 	this.state={
 		module:[],
-		
+		AddDeveloper:[],
+		post:[]
 	};
 }
+
 	state = {
 		defecttype: null,
 		defectdescription:null,
@@ -31,27 +33,8 @@ constructor(props){
 			[e.target.id]: e.target.value
 		});
 	};
-
 	handleSubmit = (e) => {
 		e.preventDefault();
-		let l={
-			"AddModule":{
-				"module": this.state.module,
-			},
-        "description":this.state.description,
-        "defectType": this.state.defectType,
-		"severity":this.state.severity,
-        "priority":this.state.priority,
-        "assignPerson":this.state.assignPerson,
-        "status":this.state.status,
-        "enteredBy":this.state.enteredBy,
-        "enteredDate":this.state.enteredDate,
-        "fixedBy": this.state.fixedBy,
-        "fixedDate": this.state.fixedDate,
-        "availableIn":this.state.availableIn,
-        "comments": this.state.comments
-      
-		}
 		console.log(this.state);
 		//  this.props.adddefect(this.state);
 		fetch("http://localhost:8080/adddefect", {
@@ -80,7 +63,7 @@ componentDidMount(){
 
 		let module=data.map((post)=>{
 			return(
-				<option value={post.moduleId} >{post.moduleId}</option>
+				<option value={post.id} >{post.modulename}</option>
 			)
 		})
 		this.setState({module:module});
@@ -133,8 +116,18 @@ componentDidMount(){
 										{/* <select id="module" className="form-control" name="module" value={this.state.module} onChange={e => this.handleChange1(e)}> */}
 										<select id="module" className="form-control" onChange={this.handleChange}>
 										 {this.state.module}
-									
+										{/* {fetch('http://localhost:8080/getAllmodules')
+      									.then(data => data.json())
+      									.then(data =>{
+											console.log(data)
+											 data.map((post)=>{ 
+											return(
+												<option>{post.modulename}</option>
 										
+											)	
+										  }) */}
+											
+										   
 											</select>
 											</div>
 											<div className="col">

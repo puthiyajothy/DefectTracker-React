@@ -9,7 +9,7 @@ class Addmodule extends React.Component{
                 project:[],
                 AddDeveloper:[],
                 post:[]
-            };
+            }
     }
     state={
 
@@ -27,12 +27,22 @@ class Addmodule extends React.Component{
     e.preventDefault();
     let d={
      
-        modulename:this.state.modulename,
-        addProject:{
-            projectid:this.state.projectid
-       },
-       adddeveloper:{
-        developerId:this.state.developerId
+    //     modulename:this.state.modulename,
+    //     addProject:{
+    //         projectid:this.state.projectid
+    //    },
+    //    adddeveloper:{
+    //     developerId:this.state.developerId
+    //     }
+    
+        "modulename":this.state.modulename,
+        "addProject": {
+            "projectId":this.state.projectId,
+           
+        },
+        "adddeveloper": {
+            "developerId":this.state.developerId,
+           
         }
     }
     console.log(d);
@@ -60,7 +70,7 @@ class Addmodule extends React.Component{
     
             let project=data.map((post)=>{
                 return(
-                    <option value={post.id}>{post.projectName}</option>
+                    <option value={post.projectId}>{post.projectName}</option>
                 )
             })
             this.setState({project:project});
@@ -76,7 +86,7 @@ class Addmodule extends React.Component{
     
             let developer=data.map((post)=>{
                 return(
-                    <option value={post.id}>{post.developerName}</option>
+                    <option value={post.developerId}>{post.developerName}</option>
                 )
             })
             this.setState({developer:developer});
@@ -92,10 +102,10 @@ class Addmodule extends React.Component{
           <div className="tile-body">
 					<div class="container">
 					<form onSubmit={this.handleSubmit}>
-                    <div className="form-group">
+                    {/* <div className="form-group">
 						<label htmlFor="control-label">Module ID:</label>
 						<input type="text" className="form-control" id="moduleId" placeholder="01" onChange={this.handleChange}/>
-					</div>
+					</div> */}
                     <div className="form-group">
 						<label htmlFor="control-label">Module Name:</label>
 						<input type="text" className="form-control" id="modulename" placeholder="Module-01" onChange={this.handleChange}/>
@@ -103,7 +113,7 @@ class Addmodule extends React.Component{
                     <div className="form-group">
 						<label htmlFor="control-label">Developer  Name:</label> 
                         {/* <input type="text" className="form-control" id="userid" placeholder="001" onChange={this.handleChange}/> */}
-                        <select id="developerName" className="form-control" onChange={this.handleChange}>
+                        <select id="developerId" className="form-control" onChange={this.handleChange}>
                                          {this.state.developer}
                                          </select>
 					</div>
@@ -111,7 +121,7 @@ class Addmodule extends React.Component{
 						<label htmlFor="control-label">Project Id:</label>
                         {/* <input type="text" className="form-control" id="projectid" placeholder="00001" onChange={this.handleChange}/> */}
 
-                        <select id="projectName" className="form-control" onChange={this.handleChange}>
+                        <select id="projectId" className="form-control" onChange={this.handleChange}>
                                          {this.state.project}
                                          </select>
 					</div>

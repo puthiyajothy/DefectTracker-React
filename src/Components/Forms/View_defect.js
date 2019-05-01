@@ -18,6 +18,25 @@ getPost() {
         this.setState ({AddDefect:data});
     })
 }
+
+delete(id){
+  console.log(id)
+  fetch(`http://localhost:8080/deleteDefect/${id}`,{
+      method:"DELETE",
+      headers : {
+          'Accept' : 'Application/json,text/plain,*/*',
+          'Content-type' : 'application/json'
+      },
+      body : JSON.stringify(this.state)
+  })
+  .then(()=>{
+      fetch ("http://localhost:8080/getAllDefects")
+      .then((res) => (res.json()))
+      .then((data) => {
+          this.setState ({AddDefect:data});
+      })
+  })
+}
 render(){
     return(
 <div className="card mb-3">
@@ -43,6 +62,8 @@ render(){
                   <th>fixedBy</th>
                   <th>availableIn</th>
                   <th>comments</th>
+                  <th>Delete</th>
+                  <th>Update</th>
                 </tr>
               </thead>
               <tbody id="addDefect">
@@ -62,6 +83,8 @@ render(){
                 <td>{e.fixedDate}</td>
                 <td>{e.availableIn}</td>
                 <td>{e.comments}</td>
+                <td><button onClick={this.delete.bind(this,e.defectId)} >Delete</button></td>
+                <td><button></button></td>
             </tr>
         ))}
               </tbody>
