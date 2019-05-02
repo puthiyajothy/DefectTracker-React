@@ -27,7 +27,7 @@ handleSubmit =(e) => {
             <div className="card-body">
                 <div className="col-md-3">
                     <div className="tile">
-                        <h1><font face="Lucida Handwriting "><b><font size={24} color="#16CFE1">P</font>rojects!!</b></font></h1>
+                        <h1><font face="Lucida Handwriting "><b><font size={24} color="#16CFE1">D</font>eveloper!!</b></font></h1>
                         <br />
                         <div className="tile-body">
                             <div class="container">
@@ -35,16 +35,17 @@ handleSubmit =(e) => {
 
                                     
                                     <div className="form-group">
-                                    <div className="col-xs-6">
+                                    <div className="col-xs-3">
                                     <label htmlFor="control-label">Developer Name:</label>
                                         <input type="text" className="form-control" id="developerName"  onChange={this.handleChange} />
-                                    
+                                        <br></br>
+                                        <div className="col-submit">
+										<button className="btn btn-primary">Add Developer</button>
+									</div>
                                     </div>
                                         </div>
 
-                                    <div className="col-submit">
-										<button className="sbtn btn-primary">Add Developer</button>
-									</div>
+                                    
 
                                 </form>
                             </div>

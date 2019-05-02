@@ -56,14 +56,9 @@ export class View_developer extends Component {
 
     render() {
         return (
-            <div className="card mb-3">
-
-                <div className="card-header">
-                    <h1><font face="Lucida Handwriting "><b><font size={15} color="#16CFE1">D</font>evelopers</b></font></h1>
-                </div>
-                <div className="card-body">
-                    <div className="table-responsive">
-                        <table className="table table-bordered" id="dataTable" width="100%" cellSpacing={0}>
+           
+            <div className="content-wrapper">
+                        <table className="table table-hover">
                             <thead>
                                 <tr>
                                     <th>DeveloperId</th>
@@ -86,8 +81,7 @@ export class View_developer extends Component {
                             </tbody>
                         </table>
                     </div>
-                </div>
-            </div>
+    
         )
     }
 }

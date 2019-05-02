@@ -118,22 +118,22 @@ select(id){
 	render() {
 		return (
 			<div className="card-body">
-				<div className="col-md-12">
+				<div className="col-md-24">
 					<div className="tile">
-						<h1><font face="Lucida Handwriting "><b><font size={24} color="#16CFE1">D</font>efect Tracker!!</b></font></h1>
+						<h1><font face="Lucida Handwriting "><b><font size={12} color="#16CFE1">D</font>efect Tracker!!</b></font></h1>
 						
 						<div className="tile-body">
 							<div class="container">
 								<form onSubmit={this.handleSubmit}>
 							
 								<div className="form-row">
-									<div className="form-group">	
+									<div className="col-xs-3">	
 										<label htmlFor="control-label">Defect Id:</label>
 										<input type="text" className="form-control" id="defectId" placeholder="001" onChange={this.handleChange} />
 									</div>
 
 									
-										<div className="col">
+										<div className="col-xs-3">
 											<label className="control-label"> Defect Type</label>
 											<select id="defectType" className="form-control" 
 											onChange={this.handleChange}>
@@ -149,20 +149,21 @@ select(id){
 
 									
 									<div className="form-row">
-									<div className="col">
+									<div className="col-xs-3">
 										<label htmlFor="control-label">Defect Description:</label>
 										<textarea type="text" className="form-control" id="description" placeholder="Defect Description" onChange={this.handleChange} />
 									</div>
-									</div>
-
-									<div className="form-row">
-									<div className="form-group">
+									<div className="col-xs-3">
 										<label htmlFor="control-label">Module </label>
 										<select id="module" className="form-control" onChange={(e) => this.handleChange1(e)}>
 										 {this.state.module1}
 											</select>
 											</div>
-											<div className="col">
+									</div>
+
+									<div className="form-row">
+								
+											<div className="col-xs-3">
 												<label className="control-label">Severity:</label>
 												<select id="severity" className="form-control" onChange={this.handleChange}>
 													<option selected>Select </option>
@@ -171,7 +172,7 @@ select(id){
 													<option>Law</option>
 												</select>
 											</div>
-										<div className="col">
+										<div className="col-xs-3">
 											<label className="control-label">Piriority:</label>
 											<select id="priority" className="form-control" onChange={this.handleChange}>
 												<option selected>Select</option>
@@ -184,7 +185,7 @@ select(id){
 
 									
 									<div className="form-row">
-									<div className="form-group">
+									<div className="col-xs-3">
 									<label className="control-label">Status</label>
 											<select id="status" className="form-control" onChange={this.handleChange}>
 												<option selected>Select Your Status</option>
@@ -197,7 +198,7 @@ select(id){
 											</select>
 										</div>
 							
-							<div className = "col">
+							<div className = "col-xs-3">
 										<label htmlFor="control-label">Assigned Person</label>
 						<select id="assignPerson" className="form-control" name="assignPerson" value={this.state.assignPerson} onChange={ this.handleChange2}>
 						<option >hfdfshj</option>
@@ -209,7 +210,7 @@ select(id){
 									</div>
 
 								<div className="form-row">									
-									<div className="form-group">
+									<div className="col-xs-3">
 									<label htmlFor="control-label">Entered Date:</label>
 									<input
 												type="date"
@@ -219,7 +220,7 @@ select(id){
 											/>
 									</div>
 									
-										<div className="col">
+										<div className="col-xs-3">
 										<label htmlFor="control-label">Entered By:</label>
 										<input type="text" className="form-control" id="enteredBy" placeholder="Enterd by" onChange={this.handleChange} />
 										
@@ -227,11 +228,11 @@ select(id){
 									</div>
 								
 								<div className="form-row">
-								<div className="control-label">
+								<div className="col-xs-3">
 							<label htmlFor="fixeddate">Fixed Date:</label>
 							<input type="date" className="form-control" id="fixedDate" onChange={this.handleChange}/>
 										</div>
-										<div className="col">
+										<div className="col-xs-3">
 							<label htmlFor="control-label">Fixed By</label>
 										<input
 											type="text"
@@ -243,7 +244,8 @@ select(id){
 									</div>
 										</div>
 
-										<div className="form-group">
+										<div className="form-row">
+										<div className="col-xs-3">
 											<label className="control-label">availablein</label>
 											<input
 												type="text"
@@ -253,13 +255,14 @@ select(id){
 												onChange={this.handleChange}
 											/>
 									</div>
-									<div className="form-group">
+									<div className="col-xs-3">
 										<label htmlFor="control-label">Comments:</label>
 										<textarea type="text" className="form-control" id="comments" placeholder="comments" onChange={this.handleChange} />
 									</div>
+										</div>
 
 									<div className="col-submit">
-										<button className="submitbtn">Add Defect</button>
+										<button className="btn-primary">Add Defect</button>
 									</div>
 								</form>
 

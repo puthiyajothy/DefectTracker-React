@@ -16,7 +16,7 @@ import Header from '../Core/Header';
 import Navbar from '../Core/Navbar';
 import Editdeveloper from "./Editdeveloper";
 import Editdefect from "./Editdefect";
-
+import Table from "./Table";
 export default class Roting extends Component {
   render() {
     return (
@@ -25,71 +25,36 @@ export default class Roting extends Component {
         <div id="wrapper">
         <Navbar/>
         <Switch>
+          <Route path="/Add_Project" exact component={Add_Project}/>
           <Route path="/" exact component={Add_Project} />
           <Route path="/Editproject/:projectId" exact component={Editproject}/>
+          <Route path = "/View_Project" exact component={View_Project} />
 
+          <Route path = "/Add_developer" exact component={Add_developer}/>
           <Route path="/" exact component={Add_developer}/>
           <Route path="/Editdeveloper/:developerId" exact component={Editdeveloper}/>
+          <Route path="/View_developer" exact component={View_developer}/>
 
-          <Roting path="/" exact component={Add_defect}/>
+
+          <Route path="/Add_defect" exact component={Add_defect}/>
+          <Route path="/View_defect" exact component={View_defect}/>
+          <Route path="/" exact component={Add_defect}/>
           <Router path="/Editdefect/:defectId" exact component={Editdefect}/>
-
-          <Route path="/Add_defect" exact render={ () => {
-          return (
-            <div className="container">
-            <br/>
-            <Add_defect/></div>);} } />
-            <Route path="/View_defect" exact component={View_defect}/>
-
-            <Route path="/Addmodule" exact render={()=>{
-       return(
-        <div className="container">
-        <Addmodule/></div> ); }}/>
-
-  
-   
-
-        <Route path="/Viewmodule" exact render={()=>{
-     return(
-      <div className="container"> 
-        <br/>
-       <Viewmodule/></div>);}}/>
-
-       <Route path="/Add_Users" exact render={()=>{
-     return(
-      <div className="container"> 
-        <br/>
-       <Add_Users/></div>);}}/>
-
-       <Route path="/View_Users" exact render={()=>{
-     return(
-      <div className="container"> 
-        <br/>
-       <View_Users/></div>);}}/>
-
-       <Route path="/Add_Project" exact render={()=>{
-     return(
-      <div className="container"> 
-        <br/>
-       <Add_Project/></div>);}}/>
-       
-       <Route path = "/View_Project" exact component={View_Project} />
-
-           <Route path = "/Add_developer" exact render = {() => {
-         return(
-           <div className="container">
-           <br/>
-           <Add_developer/></div> ); }}/>
-
-
-           <Route path="/View_developer" exact component={View_developer}/>
+          
          
-      
+          <Route path="/Addmodule" exact component={Addmodule}/>
+          <Route path="/Viewmodule" exact component={Viewmodule}/>
+          
+          <Route path="/Add_Users" exact component={Add_Users}/>
+          <Route path="/View_Users" exact component={View_Users}/>
+         
+          <Route path="/Table" exact component={Table}/>
+         
+         
         </Switch>
         </div>
       </Router>
-      
-        
+     
     );
   }
 }
