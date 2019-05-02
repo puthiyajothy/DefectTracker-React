@@ -94,7 +94,7 @@ FetchprojectById() {
                                     </div>
                                         </div>
                                     
-                                    <div className="form-group">
+                                    <div className="form-group"> 
                                     <div className="col-xs-6">
                                     <label htmlFor="control-label">Project Name:</label>
                                         <input type="text" className="form-control" id="projectName" value={this.state.projectName}  onChange={e=>this.handleChange(e)} />

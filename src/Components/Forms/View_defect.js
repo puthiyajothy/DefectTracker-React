@@ -37,6 +37,13 @@ delete(id){
       })
   })
 }
+
+handleEdit =defectId =>{
+  this.props.history.push(`Editdefect/${defectId}`)
+ // console.log(defectId);
+
+};
+
 render(){
     return(
 <div className="card mb-3">
@@ -49,7 +56,6 @@ render(){
               <thead>
                 <tr>
                   <th htmlFor="control-label">Defect Id</th>
-                  <th>defectId</th>
                   <th>module</th>
                   <th>description</th>
                   <th>defectType</th>
@@ -60,6 +66,7 @@ render(){
                   <th>enteredBy</th>
                   <th>enteredDate</th>
                   <th>fixedBy</th>
+                  <th>fixedDate</th>
                   <th>availableIn</th>
                   <th>comments</th>
                   <th>Delete</th>
@@ -84,7 +91,9 @@ render(){
                 <td>{e.availableIn}</td>
                 <td>{e.comments}</td>
                 <td><button onClick={this.delete.bind(this,e.defectId)} >Delete</button></td>
-                <td><button></button></td>
+                <td><button onClick={()=>this.handleEdit(e.defectId)}>Update</button></td>
+                
+             
             </tr>
         ))}
               </tbody>

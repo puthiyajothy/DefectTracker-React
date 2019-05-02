@@ -15,6 +15,7 @@ import View_developer from "./View_developer";
 import Header from '../Core/Header';
 import Navbar from '../Core/Navbar';
 import Editdeveloper from "./Editdeveloper";
+import Editdefect from "./Editdefect";
 
 export default class Roting extends Component {
   render() {
@@ -30,18 +31,22 @@ export default class Roting extends Component {
           <Route path="/" exact component={Add_developer}/>
           <Route path="/Editdeveloper/:developerId" exact component={Editdeveloper}/>
 
+          <Roting path="/" exact component={Add_defect}/>
+          <Router path="/Editdefect/:defectId" exact component={Editdefect}/>
+
           <Route path="/Add_defect" exact render={ () => {
           return (
             <div className="container">
             <br/>
             <Add_defect/></div>);} } />
+            <Route path="/View_defect" exact component={View_defect}/>
 
             <Route path="/Addmodule" exact render={()=>{
        return(
         <div className="container">
         <Addmodule/></div> ); }}/>
 
-  <Route path="/View_defect" exact component={View_defect}/>
+  
    
 
         <Route path="/Viewmodule" exact render={()=>{
