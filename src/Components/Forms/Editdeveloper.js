@@ -12,7 +12,7 @@ handleChange = (e) => {
 };
 
 
-FetchprojectById() {
+FetchdeveloperId() {
     fetch(
       `http://localhost:8080/getdeveloperById/` +
         this.props.match.params.developerId
@@ -29,7 +29,7 @@ FetchprojectById() {
   }
 
   componentDidMount() {
-    this.FetchprojectById(this.developerId);
+    this.FetchdeveloperId(this.developerId);
   }
 
   updatedeveloper(data) {

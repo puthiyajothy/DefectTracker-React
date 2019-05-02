@@ -5,7 +5,10 @@ class Add_defect extends React.Component {
 constructor(props){
 	super(props)
 	this.state={
-		module:[],
+		module1:[],
+		AddDeveloper:[],
+		dev:[]
+
 		
 	};
 }
@@ -16,7 +19,7 @@ constructor(props){
 		severity: null,
 		Piriority:null,
 		status: null,
-		assignedperson: null,
+		assignPerson: null,
 		enterddate: null,
 		enteredby: null,
 		fixeddate: null,
@@ -31,13 +34,34 @@ constructor(props){
 			[e.target.id]: e.target.value
 		});
 	};
+	handleChange1 = (e) => {
+		this.setState({
+			module: e.target.value
+		});
+		console.log( e.target.value)
+		let url=`http://localhost:8080/getModulesById/${e.target.value}`;
+	console.log(url);
+	fetch(url)
+	.then(resp =>resp.json())
+	.then(data =>{
+		console.log(data)
+		console.log(data.adddeveloper.developerName)
+		this.setState({dev:data.adddeveloper});
+		console.log(this.state.dev);
+	})
+	};
+	
+	handleChange2=(e)=>{
+		this.setState({
+			assignPerson: e.target.value
+		});
+		console.log(e.target.value)
 
+	}
 	handleSubmit = (e) => {
 		e.preventDefault();
-		let l={
-			"AddModule":{
-				"module": this.state.module,
-			},
+		let defect={
+		"module": this.state.module,
         "description":this.state.description,
         "defectType": this.state.defectType,
 		"severity":this.state.severity,
@@ -52,7 +76,7 @@ constructor(props){
         "comments": this.state.comments
       
 		}
-		console.log(this.state);
+		console.log(defect);
 		//  this.props.adddefect(this.state);
 		fetch("http://localhost:8080/adddefect", {
 			method: 'POST',
@@ -61,16 +85,14 @@ constructor(props){
 				'Content-type': 'application/json'
 
 			},
-			body: JSON.stringify(this.state)
+			body: JSON.stringify(defect)
 		})
 
 
 	};
 
-	select(e){
-		console.log(e)
-	}
 componentDidMount(){
+	this.select()
 	let url=`http://localhost:8080/getAllmodules`;
 	console.log(url);
 	fetch(url)
@@ -78,13 +100,19 @@ componentDidMount(){
 	.then(data =>{
 		console.log(data)
 
-		let module=data.map((post)=>{
+		let module1=data.map((post)=>{
 			return(
 				<option value={post.moduleId} >{post.moduleId}</option>
 			)
 		})
-		this.setState({module:module});
+		this.setState({module1:module1});
 	})
+
+}
+
+
+select(id){
+	console.log(id)	
 
 }
 	render() {
@@ -130,11 +158,8 @@ componentDidMount(){
 									<div className="form-row">
 									<div className="form-group">
 										<label htmlFor="control-label">Module </label>
-										{/* <select id="module" className="form-control" name="module" value={this.state.module} onChange={e => this.handleChange1(e)}> */}
-										<select id="module" className="form-control" onChange={this.handleChange}>
-										 {this.state.module}
-									
-										
+										<select id="module" className="form-control" onChange={(e) => this.handleChange1(e)}>
+										 {this.state.module1}
 											</select>
 											</div>
 											<div className="col">
@@ -146,9 +171,6 @@ componentDidMount(){
 													<option>Law</option>
 												</select>
 											</div>
-										
-								
-								
 										<div className="col">
 											<label className="control-label">Piriority:</label>
 											<select id="priority" className="form-control" onChange={this.handleChange}>
@@ -177,12 +199,10 @@ componentDidMount(){
 							
 							<div className = "col">
 										<label htmlFor="control-label">Assigned Person</label>
-						{/* <select id="module" className="form-control" name="module" value={this.state.module} onChange={e => this.handleChange1(e)}>
-										 {this.state.x} */}
-							 <select id="assignPerson" className="form-control" onChange={this.handleChange}>
-												<option selected>Select Person</option>
-												<option>Saajitha</option>
-												<option>Kishan</option>
+						<select id="assignPerson" className="form-control" name="assignPerson" value={this.state.assignPerson} onChange={ this.handleChange2}>
+						<option >hfdfshj</option>
+										 <option value={this.state.dev.developerName}>{this.state.dev.developerName}</option>
+				
 												</select>
 								
 									</div>
