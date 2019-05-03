@@ -56,8 +56,8 @@ export class View_developer extends Component {
 
     render() {
         return (
-           
-            <div className="content-wrapper">
+           <div className="container">
+          <div className="content-wrapper">
                         <table className="table table-hover">
                             <thead>
                                 <tr>
@@ -72,8 +72,8 @@ export class View_developer extends Component {
                                 <tr>
                                     <td>{e.developerId}</td>
                                     <td>{e.developerName}</td>
-                                    <td><button onClick={this.delete.bind(this,e.developerId)}>Delete</button></td>
-                                    <td><button onClick={()=>this.handleEdit(e.developerId)} >Update</button></td>
+                                    <td><button className="btn btn-danger" onClick={this.delete.bind(this,e.developerId)}>Delete</button></td>
+                                    <td><button className="btn btn-primary" onClick={()=>this.handleEdit(e.developerId)} >Update</button></td>
                                    
                                 </tr>
                             ))}
@@ -82,6 +82,8 @@ export class View_developer extends Component {
                         </table>
                     </div>
     
+           </div>
+           
         )
     }
 }

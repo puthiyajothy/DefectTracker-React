@@ -95,38 +95,55 @@ class Addmodule extends React.Component{
     render(){
         return(
     <div className="card-body">
-      <div className="col-md-6">
         <div className="tile">
-          <h1><font face="Lucida Handwriting "><b><font size={24} color="#16CFE1">A</font>dd Module!!</b></font></h1>
-          <br />
+        	
+        <div className="form-row">
+        <div className="col-xs-3">
+          {/* <h1><font face="Lucida Handwriting "><font size={6} color="#16CFE1">A</font>ddNewModule</font></h1> */}
+        </div>
+        </div>
           <div className="tile-body">
-					<div class="container">
-					<form onSubmit={this.handleSubmit}>
-                    {/* <div className="form-group">
+			<div class="container">
+			<form onSubmit={this.handleSubmit}>
+                    	
+				<div className="form-row">
+                    <div className="col-xs-3">
 						<label htmlFor="control-label">Module ID:</label>
 						<input type="text" className="form-control" id="moduleId" placeholder="01" onChange={this.handleChange}/>
-					</div> */}
-                    <div className="form-group">
+					</div> 
+                    </div>
+                   	
+				<div className="form-row">
+                    <div className="col-xs-3">
 						<label htmlFor="control-label">Module Name:</label>
-						<input type="text" className="form-control" id="modulename" placeholder="Module-01" onChange={this.handleChange}/>
+						<input type="text" className="form-control" id="modulename" placeholder="Enter Module Name" onChange={this.handleChange}/>
 					</div>
-                    <div className="form-group">
-						<label htmlFor="control-label">Developer  Name:</label> 
-                        {/* <input type="text" className="form-control" id="userid" placeholder="001" onChange={this.handleChange}/> */}
-                        <select id="developerId" className="form-control" onChange={this.handleChange}>
-                                         {this.state.developer}
-                                         </select>
-					</div>
-                    <div className="form-group">
-						<label htmlFor="control-label">Project Id:</label>
-                        {/* <input type="text" className="form-control" id="projectid" placeholder="00001" onChange={this.handleChange}/> */}
+                </div>   
+             
 
-                        <select id="projectId" className="form-control" onChange={this.handleChange}>
-                                         {this.state.project}
-                                         </select>
+                	
+				<div className="form-row">
+                    <div className="col-xs-3">
+						<label htmlFor="control-label">Developer  Name:</label> 
+                        <select id="developerId" className="form-control"  onChange={this.handleChange}>
+                        <option >Select Developer</option>
+                                         {this.state.developer}
+                        </select>
 					</div>
+                    </div>
+                    	
+				<div className="form-row">
+                        <div className="col-xs-3">
+						<label htmlFor="control-label">Project Id:</label>
+                        <select id="projectId" className="form-control"  onChange={this.handleChange}>
+                        <option>Select Project</option>
+                                         {this.state.project}
+                        </select>
+					</div>
+                </div>
+            <br/>
                     <div className="col-submit">
-						<button className="sbtn btn-primary">Add Module</button>
+						<button className="btn btn-primary">Add Module</button>
 					</div>
 
                     </form>	
@@ -134,7 +151,8 @@ class Addmodule extends React.Component{
         </div>
     </div>
 </div>
-</div>
+
+
 
         )
     }

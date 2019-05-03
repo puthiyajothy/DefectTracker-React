@@ -51,22 +51,17 @@ export default class Viewmodule extends React.Component{
       }
     render(){
         return(
-
-     <div className="card mb-3">
-    
-        <div className="card-header">
-        <h1><font face="Lucida Handwriting "><b><font size={15} color="#16CFE1">M</font>odules</b></font></h1>
-          </div>
-        <div className="card-body">
-          <div className="table-responsive">
-            <table className="table table-bordered" id="dataTable" width="100%" cellSpacing={0}>
+        <div className="container">
+               <div className="content-wrapper">
+            <table className="table table-hover">
               <thead>
                <tr>
-                  <th>Module Id</th>
-                  <th>Module Name</th>
-                  <th>Project ID</th>
-                  <th>Developer Name</th>
+                  <th>ModuleId</th>
+                  <th>ModuleName</th>
+                  <th>ProjectID</th>
+                  <th>DeveloperName</th>
                   <th>Delete</th>
+                  <th>Update</th>
                 </tr>          
                 </thead>
                 <tbody id="addmodules">
@@ -76,15 +71,20 @@ export default class Viewmodule extends React.Component{
                         <td>{e.modulename}</td>
                         <td>{e.addProject.projectName}</td>
                         <td>{e.adddeveloper.developerName}</td>
-                        <td><button>Delete</button></td>
+                        <td><button className="btn btn-danger">Delete</button></td>
+                        <td><button className="btn btn-primary">Update</button></td>
                        
                     </tr>
                     ))}      
                 </tbody>
             </table>
           </div>
+
+
+
         </div>
-    </div>
+       
+    
 
     
 

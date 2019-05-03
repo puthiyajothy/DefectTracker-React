@@ -46,29 +46,25 @@ handleEdit =defectId =>{
 
 render(){
     return(
-<div className="card mb-3">
-        <div className="card-header">
-          <i className="fas fa-table" />
-          Data Table Example</div>
-        <div className="card-body">
-          <div className="table-responsive">
-            <table className="table table-bordered" id="dataTable" width="100%" cellSpacing={0}>
+      <div className="container">
+      <div className="content-wrapper">
+        <table className="table table-hover">
               <thead>
                 <tr>
-                  <th htmlFor="control-label">Defect Id</th>
-                  <th>module</th>
-                  <th>description</th>
-                  <th>defectType</th>
-                  <th>severity</th>
-                  <th>priority</th>
-                  <th>assignPerson</th>
-                  <th>status</th>
-                  <th>enteredBy</th>
-                  <th>enteredDate</th>
-                  <th>fixedBy</th>
-                  <th>fixedDate</th>
-                  <th>availableIn</th>
-                  <th>comments</th>
+                  <th>DefectId</th>
+                  <th>Module</th>
+                  <th>Description</th>
+                  <th>DefectType</th>
+                  <th>Severity</th>
+                  <th>Priority</th>
+                  <th>AssignPerson</th>
+                  <th>Status</th>
+                  <th>EnteredBy</th>
+                  <th>EnteredDate</th>
+                  <th>FixedBy</th>
+                  <th>FixedDate</th>
+                  <th>AvailableIn</th>
+                  <th>Comments</th>
                   <th>Delete</th>
                   <th>Update</th>
                 </tr>
@@ -90,8 +86,8 @@ render(){
                 <td>{e.fixedDate}</td>
                 <td>{e.availableIn}</td>
                 <td>{e.comments}</td>
-                <td><button onClick={this.delete.bind(this,e.defectId)} >Delete</button></td>
-                <td><button onClick={()=>this.handleEdit(e.defectId)}>Update</button></td>
+                <td><button className="btn btn-danger" onClick={this.delete.bind(this,e.defectId)} >Delete</button></td>
+                <td><button className="btn btn-primary" onClick={()=>this.handleEdit(e.defectId)}>Update</button></td>
                 
              
             </tr>
@@ -99,9 +95,12 @@ render(){
               </tbody>
             </table>
           </div>
-        </div>
-      </div>
+       
 
+      
+      
+      </div>
+      
         
     );
 }

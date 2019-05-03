@@ -26,8 +26,10 @@ export default class Roting extends Component {
         <Navbar/>
         <Switch>
           <Route path="/Add_Project" exact component={Add_Project}/>
+          
           <Route path="/" exact component={Add_Project} />
           <Route path="/Editproject/:projectId" exact component={Editproject}/>
+          
           <Route path = "/View_Project" exact component={View_Project} />
 
           <Route path = "/Add_developer" exact component={Add_developer}/>

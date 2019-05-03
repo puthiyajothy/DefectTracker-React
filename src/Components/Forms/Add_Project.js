@@ -25,23 +25,25 @@ handleSubmit =(e) => {
     render() {
         return (
             <div className="card-body">
-                <div className="col-md-left">
-                    <div className="tile">
-                        <h1><font face="Lucida Handwriting "><b><font size={24} color="#16CFE1">P</font>rojects!!</b></font></h1>
-                        <br />
                         <div className="tile-body">
                             <div class="container">
                                 <form onSubmit={this.handleSubmit}>
 
-                                    
                                     <div className="form-group">
                                     <div className="col-xs-3">
-                                    <label htmlFor="control-label">Project Name:</label>
-                                    <input type="text" className="form-control" id="projectName"  onChange={this.handleChange} />
-                                    <br>
-                                    </br>
+                                    <label className="control-label">Project ID:</label>
+                                    <input type="text" className="form-control" id="projectId"  onChange={this.handleChange}/>
+                                    </div>
+                                    </div>
+
+                                    <div className="form-group">
                                     <div className="col-xs-3">
-										<button className="btn btn-primary">Add Project</button>
+                                    <label className="control-label">Project Name:</label>
+                                    <input type="text" className="form-control" id="projectName"  onChange={this.handleChange} />
+                                    <br/>
+
+                                    <div className="col-xs-3">
+									<button className="btn btn-primary">Add Project</button>
 									</div>
                                     </div>
                                        
@@ -50,8 +52,8 @@ handleSubmit =(e) => {
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+
+      
         )
     }
 }

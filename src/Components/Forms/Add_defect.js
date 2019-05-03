@@ -120,7 +120,7 @@ select(id){
 			<div className="card-body">
 				<div className="col-md-24">
 					<div className="tile">
-						<h1><font face="Lucida Handwriting "><b><font size={12} color="#16CFE1">D</font>efect Tracker!!</b></font></h1>
+						<h1><font face="Lucida Handwriting ">New Defect</font></h1>
 						
 						<div className="tile-body">
 							<div class="container">
@@ -150,11 +150,11 @@ select(id){
 									
 									<div className="form-row">
 									<div className="col-xs-3">
-										<label htmlFor="control-label">Defect Description:</label>
+										<label className="control-label">Defect Description:</label>
 										<textarea type="text" className="form-control" id="description" placeholder="Defect Description" onChange={this.handleChange} />
 									</div>
 									<div className="col-xs-3">
-										<label htmlFor="control-label">Module </label>
+										<label className="control-label">Module </label>
 										<select id="module" className="form-control" onChange={(e) => this.handleChange1(e)}>
 										 {this.state.module1}
 											</select>
@@ -201,7 +201,7 @@ select(id){
 							<div className = "col-xs-3">
 										<label htmlFor="control-label">Assigned Person</label>
 						<select id="assignPerson" className="form-control" name="assignPerson" value={this.state.assignPerson} onChange={ this.handleChange2}>
-						<option >hfdfshj</option>
+						<option>Select Asssign Person</option>
 										 <option value={this.state.dev.developerName}>{this.state.dev.developerName}</option>
 				
 												</select>

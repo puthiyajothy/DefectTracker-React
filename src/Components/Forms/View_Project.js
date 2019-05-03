@@ -55,18 +55,13 @@ export class View_Project extends Component {
     
     render() {
         return (
-            <div className="card mb-3">
-
-                <div className="card-header">
-                    <h1><font face="Lucida Handwriting "><b><font size={15} color="#16CFE1">M</font>odules</b></font></h1>
-                </div>
-                <div className="card-body">
-                    <div className="table-responsive">
-                        <table className="table table-bordered" id="dataTable" width="100%" cellSpacing={0}>
+            <div className="container">
+            <div className="content-wrapper">
+                     <table className="table table-hover">
                             <thead>
                                 <tr>
-                                    <th>Project Id</th>
-                                    <th>Project Name</th>
+                                    <th>ProjectId</th>
+                                    <th>ProjectName</th>
                                     <th>Delete</th>
                                     <th>Update</th>
                                 </tr>
@@ -76,16 +71,17 @@ export class View_Project extends Component {
                                 <tr>
                                     <td>{e.projectId}</td>
                                     <td>{e.projectName}</td>
-                                    <td><button onClick={this.delete.bind(this,e.projectId)}>Delete</button></td>
-                                    <td><button onClick={()=>this.handleEdit(e.projectId)}>Update</button></td>
+                                    <td><button className="btn btn-danger" onClick={this.delete.bind(this,e.projectId)}>Delete</button></td>
+                                    <td><button className="btn btn-primary" onClick={()=>this.handleEdit(e.projectId)}>Update</button></td>
                                 </tr>
                             ))}
 
                             </tbody>
                         </table>
-                    </div>
-                </div>
+                                </div>
+        
             </div>
+            
         )
     }
 }
