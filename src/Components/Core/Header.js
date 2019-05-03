@@ -1,12 +1,13 @@
 import React from 'react';
 
 
+
 export default class Header extends React.Component{
     render(){
         return(
-            <nav className="navbar navbar-expand navbar-dark bg-dark static-top">
-        <a className="navbar-brand mr-1" href="qa_dashboard.html">Defect Tracker</a>
-        <button className="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+<nav className="navbar navbar-expand navbar-dark bg-dark static-top">
+        <a className="navbar-brand mr-1" >Defect Tracker</a>
+        <button className="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle">
           <i className="fas fa-bars" />
         </button>
 

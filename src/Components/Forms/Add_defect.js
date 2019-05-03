@@ -119,11 +119,12 @@ select(id){
 		return (
 			<div className="card-body">
 				<div className="col-md-24">
-					<div className="tile">
-						<h1><font face="Lucida Handwriting ">New Defect</font></h1>
-						
+					
 						<div className="tile-body">
 							<div class="container">
+							<div className="tile">
+						<h1><font face="Lucida Handwriting ">New Defect</font></h1>
+						<br/>
 								<form onSubmit={this.handleSubmit}>
 							
 								<div className="form-row">
@@ -229,7 +230,7 @@ select(id){
 								
 								<div className="form-row">
 								<div className="col-xs-3">
-							<label htmlFor="fixeddate">Fixed Date:</label>
+							<label className="fixeddate">Fixed Date:</label>
 							<input type="date" className="form-control" id="fixedDate" onChange={this.handleChange}/>
 										</div>
 										<div className="col-xs-3">
@@ -261,8 +262,8 @@ select(id){
 									</div>
 										</div>
 
-									<div className="col-submit">
-										<button className="btn-primary">Add Defect</button>
+										<div className="col-submit">
+										<button className="btn btn-primary">Add Defect</button>
 									</div>
 								</form>
 

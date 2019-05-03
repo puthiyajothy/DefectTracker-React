@@ -49,7 +49,7 @@ export class View_developer extends Component {
         developerName: this.state.developerName
         }
 
-    AddDeveloper.updateproject(AddDeveloperUpdate);
+    AddDeveloper.updatedeveloper(AddDeveloperUpdate);
     console.log(AddDeveloperUpdate);
 };
     

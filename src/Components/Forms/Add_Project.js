@@ -25,8 +25,11 @@ handleSubmit =(e) => {
     render() {
         return (
             <div className="card-body">
-                        <div className="tile-body">
-                            <div class="container">
+                <div className="tile">
+                            <div className="tile-body">
+                             <div class="container">
+                             <div className="tile">
+						        <h1><font face="Lucida Handwriting ">New Project</font></h1>
                                 <form onSubmit={this.handleSubmit}>
 
                                     <div className="form-group">
@@ -35,7 +38,6 @@ handleSubmit =(e) => {
                                     <input type="text" className="form-control" id="projectId"  onChange={this.handleChange}/>
                                     </div>
                                     </div>
-
                                     <div className="form-group">
                                     <div className="col-xs-3">
                                     <label className="control-label">Project Name:</label>
@@ -52,8 +54,9 @@ handleSubmit =(e) => {
                             </div>
                         </div>
                     </div>
-
-      
+             </div>
+            </div>
+        
         )
     }
 }

@@ -80,32 +80,33 @@ FetchprojectById() {
             <div className="card-body">
                 <div className="col-md-3">
                     <div className="tile">
-                        <h1><font face="Lucida Handwriting "><b><font size={24} color="#16CFE1">P</font>rojects!!</b></font></h1>
+                        <h1><font face="Lucida Handwriting ">Projects</font></h1>
                         <br />
                         <div className="tile-body">
                             <div className="container">
                                 <form onSubmit={this.handleSubmit}>
 
                                 <div className="form-group">
-                                    <div className="col-xs-6">
-                                    <label htmlFor="control-label">Project Id:</label>
+                                    <div className="col-xs-3">
+                                    <label className="control-label">Project Id:</label>
                                         <input type="text" className="form-control" id="projectId" value={this.state.projectId}  onChange={e=>this.handleChange(e)} />
                                     
                                     </div>
                                         </div>
-                                    
                                     <div className="form-group"> 
-                                    <div className="col-xs-6">
-                                    <label htmlFor="control-label">Project Name:</label>
+                                    <div className="col-xs-3">
+                                    <label className="control-label">Project Name:</label>
                                         <input type="text" className="form-control" id="projectName" value={this.state.projectName}  onChange={e=>this.handleChange(e)} />
-                                    
+                                        <b></b>
+                                        <br></br>
+                                        <div className="col-submit">
+									                	<button className="btn btn-primary" onClick={e=>this.handleUpdate(e)}>Add Project</button>
+									                   </div>
+
                                     </div>
                                         </div>
 
-                                    <div className="col-submit">
-										<button className="sbtn btn-primary" onClick={e=>this.handleUpdate(e)}>Add Project</button>
-									</div>
-
+                                    
                                 </form>
                             </div>
                         </div>

@@ -104,11 +104,14 @@ class Addmodule extends React.Component{
         </div>
           <div className="tile-body">
 			<div class="container">
+            <div className="tile">
+            <h1><font face="Lucida Handwriting ">New Module</font></h1>
+
 			<form onSubmit={this.handleSubmit}>
                     	
 				<div className="form-row">
                     <div className="col-xs-3">
-						<label htmlFor="control-label">Module ID:</label>
+						<label className="control-label">Module ID:</label>
 						<input type="text" className="form-control" id="moduleId" placeholder="01" onChange={this.handleChange}/>
 					</div> 
                     </div>
@@ -151,7 +154,7 @@ class Addmodule extends React.Component{
         </div>
     </div>
 </div>
-
+</div>
 
 
         )

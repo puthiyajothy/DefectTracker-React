@@ -57,7 +57,7 @@ FetchdeveloperId() {
     developerName: this.state.developerName,
    
   };
-  this.updateproject(AddDeveloperUpdate);
+  this.updatedeveloper(AddDeveloperUpdate);
   console.log(AddDeveloperUpdate);
 };
 
@@ -66,31 +66,30 @@ FetchdeveloperId() {
             <div className="card-body">
                 <div className="col-md-3">
                     <div className="tile">
-                        <h1><font face="Lucida Handwriting "><b><font size={24} color="#16CFE1">P</font>rojects!!</b></font></h1>
+                        <h1><font face="Lucida Handwriting ">Developer</font></h1>
                         <br />
                         <div className="tile-body">
                             <div class="container">
                                 <form onSubmit={this.handleSubmit}>
 
                                 <div className="form-group">
-                                    <div className="col-xs-6">
+                                    <div className="col-xs-3">
                                     <label htmlFor="control-label">Developer Id:</label>
                                         <input type="text" className="form-control" id="developerId" value={this.state.developerId} onChange={e=>this.handleChange(e)} />
                                     
                                     </div>
                                         </div>
                                     <div className="form-group">
-                                    <div className="col-xs-6">
+                                    <div className="col-xs-3">
                                     <label htmlFor="control-label">Developer Name:</label>
-                                        <input type="text" className="form-control" id="developerName" value={this.state.developerName} onChange={e=>this.handleChange(e)} />
-                                
-                                    </div>
-                                        </div>
-
+                                  <input type="text" className="form-control" id="developerName" value={this.state.developerName} onChange={e=>this.handleChange(e)} />
+                                  <br></br>
                                     <div className="col-submit">
-										<button className="sbtn btn-primary">Add Developer</button>
-									</div>
+										                <button className="btn btn-primary"  onClick={e=>this.handleUpdate(e)}>Add Developer</button>
+									                  </div>
 
+                                    </div>
+                                  </div>
                                 </form>
                             </div>
                         </div>
