@@ -70,7 +70,7 @@ class Addmodule extends React.Component{
     
             let project=data.map((post)=>{
                 return(
-                    <option value={post.projectId}>{post.projectName}</option>
+                    <option value={post.projectId}>{post.projectId}</option>
                 )
             })
             this.setState({project:project});
@@ -86,7 +86,7 @@ class Addmodule extends React.Component{
     
             let developer=data.map((post)=>{
                 return(
-                    <option value={post.developerId}>{post.developerName}</option>
+                    <option value={post.developerId}>{post.developerId}</option>
                 )
             })
             this.setState({developer:developer});

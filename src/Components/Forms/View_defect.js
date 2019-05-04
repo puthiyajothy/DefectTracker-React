@@ -41,33 +41,33 @@ delete(id){
 
 handleEdit =defectId =>{
   this.props.history.push(`Editdefect/${defectId}`)
- // console.log(defectId);
+ console.log(defectId);
 
 };
 
-handleUpdate = e => {
-	e.preventDefault();
-  // console.log(subClassId);
-  const AddDefectUpdate = {
-	defectId:this.state.defectId,
-	module:this.state.module,
-	description:this.state.description,
-	defectType:this.state.defectType,
-	severity:this.state.severity,
-	priority:this.state.priority,
-	assignPerson:this.state.assignPerson,
-	status:this.state.status,
-	enteredBy:this.state.enteredBy,
-	enteredDate:this.state.enteredDate,
-	fixedBy:this.state.fixedBy,
-	fixedDate:this.state.fixedDate,
-	availableIn:this.state.availableIn,
-	comments:this.state.comments,
+// handleUpdate = e => {
+// 	e.preventDefault();
+//   // console.log(subClassId);
+//   const AddDefectUpdate = {
+// 	defectId:this.state.defectId,
+// 	module:this.state.module,
+// 	description:this.state.description,
+// 	defectType:this.state.defectType,
+// 	severity:this.state.severity,
+// 	priority:this.state.priority,
+// 	assignPerson:this.state.assignPerson,
+// 	status:this.state.status,
+// 	enteredBy:this.state.enteredBy,
+// 	enteredDate:this.state.enteredDate,
+// 	fixedBy:this.state.fixedBy,
+// 	fixedDate:this.state.fixedDate,
+// 	availableIn:this.state.availableIn,
+// 	comments:this.state.comments,
    
-  };
-  AddDefect.updateDefect(AddDefectUpdate);
-  console.log(AddDefectUpdate);
-};
+//   };
+//   AddDefect.updateDefect(AddDefectUpdate);
+//   console.log(AddDefectUpdate);
+// };
 
 render(){
     return(

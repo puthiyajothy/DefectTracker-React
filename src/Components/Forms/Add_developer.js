@@ -39,10 +39,7 @@ handleSubmit =(e) => {
 										<button className="btn btn-primary">Add Developer</button>
 									</div>
                                     </div>
-                                        </div>
-
-                                    
-
+                            </div>
                                 </form>
                             </div>
                         </div>

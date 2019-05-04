@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import AddModule from "./Addmodule";
 
 export default class Viewmodule extends React.Component{
     state={
@@ -33,7 +34,7 @@ export default class Viewmodule extends React.Component{
 
     delete(id){
         console.log(id)
-        fetch(`http://localhost:8080/deleteDefect/${id}`,{
+        fetch(`http://localhost:8080/deleteModule/${id}`,{
             method:"DELETE",
             headers : {
                 'Accept' : 'Application/json,text/plain,*/*',
@@ -42,13 +43,35 @@ export default class Viewmodule extends React.Component{
             body : JSON.stringify(this.state)
         })
         .then(()=>{
-            fetch ("http://localhost:8080/getAllDefects")
+            fetch ("http://localhost:8080/addmodule")
             .then((res) => (res.json()))
             .then((data) => {
-                this.setState ({AddDefect:data});
+                this.setState ({AddModule:data});
             })
         })
-      }
+    }
+
+
+
+      handleEdit =moduleId =>{
+        this.props.history.push(`Editmodule/${moduleId}`)
+        console.log(moduleId);
+
+    };
+
+    handleUpdate = moduleId=>{
+        console.log(moduleId);
+        const AddModuleUpdate={
+        moduleId :this.state.moduleId,
+        modulename:this.state.modulename,
+        projectName:this.state.projectName,
+        developerName:this.state.developerName,
+        }
+
+        AddModule.updateModule(AddModuleUpdate);
+        console.log(AddModuleUpdate);
+};
+
     render(){
         return(
         <div className="container">
@@ -71,8 +94,8 @@ export default class Viewmodule extends React.Component{
                         <td>{e.modulename}</td>
                         <td>{e.addProject.projectName}</td>
                         <td>{e.adddeveloper.developerName}</td>
-                        <td><button className="btn btn-danger">Delete</button></td>
-                        <td><button className="btn btn-primary">Update</button></td>
+                        <td><button className="btn btn-danger" onClick={this.delete.bind(this,e.moduleId)}>Delete</button></td>
+                        <td><button className="btn btn-primary" onClick={()=>this.handleEdit(e.moduleId)}>Update</button></td>
                        
                     </tr>
                     ))}      
