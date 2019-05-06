@@ -2,11 +2,21 @@ import React from "react"
 
 
 export default class Editmodule extends React.Component{
+  // constructor(props){
+  //   super(props)
+  //   this.state={
+  //       project:[],
+  //       AddDeveloper:[],
+  //   }
+  // }
     state={
         moduleId:"",
         modulename:"",
         developerName:"",
-        projectId:""
+        projectId:"",
+        projectName:'',
+        project:[],
+        AddDeveloper:[],
 
         }
         
@@ -61,6 +71,8 @@ export default class Editmodule extends React.Component{
                     moduleId: data.moduleId,
                     modulename:data.modulename,
                     projectId:data.addProject.projectId,
+                    projectName:data.addProject.projectName,
+                    developerId:data.adddeveloper.developerId,
                     developerName:data.adddeveloper.developerName,
                    isLoading: false
                 })
@@ -92,17 +104,18 @@ export default class Editmodule extends React.Component{
           }
         
           handleUpdate =e=>{
-            console.log(e);
+            e.preventDefault();
+            console.log(this.state.value);
             const AddModuleUpdate={
             moduleId :this.state.moduleId,
             modulename:this.state.modulename,
             addProject: {
               projectId:this.state.projectId,
-             
           },
+          adddeveloper:{
             developerName:this.state.developerName,
-            }
-    
+          }
+        }
             this.updateModule(AddModuleUpdate);
             console.log(AddModuleUpdate);
     };
@@ -143,8 +156,8 @@ render(){
 				<div className="form-row">
                     <div className="col-xs-3">
 						<label htmlFor="control-label">Developer  Name:</label> 
-                        <select id="developerId" className="form-control" value={this.state.developerName}  onChange={e=>this.handleChange(e)}>
-                        <option >Select Developer</option>
+                        <select id="developerId" className="form-control"   onChange={e=>this.handleChange(e)}>
+                        <option value={this.state.developerName} >{this.state.developerName}</option>
                                        
                         </select>
 					</div>
@@ -154,7 +167,7 @@ render(){
                         <div className="col-xs-3">
 						<label htmlFor="control-label">Project Id:</label>
                         <select id="projectId" className="form-control"  value={this.state.projectId}  onChange={e=>this.handleChange(e)}>
-                        {/* <option>Select Project</option> */}
+                        <option value={this.state.projectId}>{this.state.projectId}</option>
                                         
                         </select>
 					</div>
