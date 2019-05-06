@@ -7,16 +7,17 @@ constructor(props){
 	this.state={
 		module1:[],
 		AddDeveloper:[],
-		dev:[]
+		dev:[],
+		post:[]
 
 		
-	};
+	}
 }
 	state = {
 		defecttype: null,
 		defectdescription:null,
-		module:null,
 		severity: null,
+		moduleId:null,
 		Piriority:null,
 		status: null,
 		assignPerson: null,
@@ -25,7 +26,7 @@ constructor(props){
 		fixeddate: null,
 		fixedby: null,
 		availablein: null,
-		comments: null,
+		comments: null
 		
 }
 
@@ -33,10 +34,10 @@ constructor(props){
 		this.setState({
 			[e.target.id]: e.target.value
 		});
-	};
+	}
 	handleChange1 = (e) => {
 		this.setState({
-			module: e.target.value
+			moduleId: e.target.value
 		});
 		console.log( e.target.value)
 		let url=`http://localhost:8080/getModulesById/${e.target.value}`;
@@ -61,10 +62,12 @@ constructor(props){
 	handleSubmit = (e) => {
 		e.preventDefault();
 		let defect={
-		"module": this.state.module,
         "description":this.state.description,
         "defectType": this.state.defectType,
 		"severity":this.state.severity,
+		"addModule":{
+			"moduleId":this.state.moduleId,
+		},
         "priority":this.state.priority,
         "assignPerson":this.state.assignPerson,
         "status":this.state.status,
@@ -102,7 +105,7 @@ componentDidMount(){
 
 		let module1=data.map((post)=>{
 			return(
-				<option value={post.moduleId} >{post.moduleId}</option>
+				<option value={post.moduleId} >{post.modulename}</option>
 			)
 		})
 		this.setState({module1:module1});
@@ -156,7 +159,8 @@ select(id){
 									</div>
 									<div className="col-xs-3">
 										<label className="control-label">Module </label>
-										<select id="module" className="form-control" onChange={(e) => this.handleChange1(e)}>
+										<select id="moduleId" className="form-control" onChange={(e) => this.handleChange1(e)} value={this.state.moduleId}>
+										<option>Select Module</option>
 										 {this.state.module1}
 											</select>
 											</div>

@@ -5,7 +5,7 @@ export default class Editmodule extends React.Component{
     state={
         moduleId:"",
         modulename:"",
-        developerId:"",
+        developerName:"",
         projectId:""
 
         }
@@ -16,6 +16,40 @@ export default class Editmodule extends React.Component{
         });
         }
         
+        componentDidMount(){
+          let url=`http://localhost:8080/getAllProjects`;
+          console.log(url);
+          fetch(url)
+          .then(resp =>resp.json())
+          .then(data =>{
+              console.log(data)
+      
+              let project=data.map((post)=>{
+                  return(
+                      <option value={post.projectId}>{post.projectId}</option>
+                  )
+              })
+              this.setState({project:project});
+          }) 
+  
+  
+          let ur=`http://localhost:8080/getAlldevelopers`;
+          console.log(ur);
+          fetch(ur)
+          .then(resp =>resp.json())
+          .then(data =>{
+              console.log(data)
+      
+              let developer=data.map((post)=>{
+                  return(
+                      <option value={post.developerId}>{post.developerId}</option>
+                  )
+              })
+              this.setState({developer:developer});
+          }) 
+      }
+
+
         FetchprojectById() {
             fetch(
               `http://localhost:8080/getModulesById/` +
@@ -26,10 +60,11 @@ export default class Editmodule extends React.Component{
                 this.setState({
                     moduleId: data.moduleId,
                     modulename:data.modulename,
-                    projectName:data.projectName,
-                    developerName:data.developerName,
+                    projectId:data.addProject.projectId,
+                    developerName:data.adddeveloper.developerName,
                    isLoading: false
                 })
+                // console.log(data.adddeveloper.developerName)
               )
               .catch(error => this.setState({ error, isLoading: false }));
           }
@@ -61,7 +96,10 @@ export default class Editmodule extends React.Component{
             const AddModuleUpdate={
             moduleId :this.state.moduleId,
             modulename:this.state.modulename,
-            projectName:this.state.projectName,
+            addProject: {
+              projectId:this.state.projectId,
+             
+          },
             developerName:this.state.developerName,
             }
     
@@ -80,7 +118,7 @@ render(){
         </div>
         </div>
           <div className="tile-body">
-			<div class="container">
+			<div className="container">
             <div className="tile">
             <h1><font face="Lucida Handwriting ">update Module</font></h1>
 
@@ -105,8 +143,8 @@ render(){
 				<div className="form-row">
                     <div className="col-xs-3">
 						<label htmlFor="control-label">Developer  Name:</label> 
-                        <select id="developerId" className="form-control" value={this.state.developerId}  onChange={e=>this.handleChange(e)}>
-                        {/* <option >Select Developer</option> */}
+                        <select id="developerId" className="form-control" value={this.state.developerName}  onChange={e=>this.handleChange(e)}>
+                        <option >Select Developer</option>
                                        
                         </select>
 					</div>

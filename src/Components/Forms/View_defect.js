@@ -98,7 +98,7 @@ render(){
               {this.state.AddDefect.map(e => (
                 <tr>
                 <td>{e.defectId}</td>
-                <td>{e.module}</td>
+                <td>{e.addModule.moduleId}</td>
                 <td>{e.description}</td>
                 <td>{e.defectType}</td>
                 <td>{e.severity}</td>
